@@ -1,10 +1,15 @@
-import React from 'react';
+import styled from "styled-components";
 
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 const Content = () => {
     return (
-        <div>
+        <ContentWrapper>
+            <h2>Content</h2>
+        </ContentWrapper>
 
-        </div>
     );
 };
 
