@@ -1,10 +1,21 @@
-import React from 'react';
+
+import styled from "styled-components";
+
+const SidebarWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
 
 const Sidebar = () => {
     return (
-        <div>
+        <SidebarWrapper>
+            {/*TODO*/}
+            {/*- Add default image for item */}
+            {/*- Add default image for pokemon */}
 
-        </div>
+            {/*<PokeImage/>*/}
+            {/*<PokeImage/>*/}
+        </SidebarWrapper>
     );
 };
 

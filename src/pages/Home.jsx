@@ -13,7 +13,6 @@ const Home = () => {
         <HomeWrapper>
             <Sidebar/>
             <Content/>
-
         </HomeWrapper>
     );
 };
