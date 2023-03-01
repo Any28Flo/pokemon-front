@@ -9,7 +9,6 @@ const Content = () => {
         <ContentWrapper>
             <h2>Content</h2>
         </ContentWrapper>
-
     );
 };
 
