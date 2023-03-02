@@ -1,9 +1,14 @@
 import React from 'react';
 import PokemonItem from "./PokemonItem";
+import styled from "styled-components";
+
+const ListStyled = styled.ul`
+  width: 100%;
+`
 
 const Pokemons = ({pokemons}) => {
     return (
-        <ul>
+        <ListStyled>
             {
                 pokemons.map((pokemon,index) => (
 
@@ -12,7 +17,7 @@ const Pokemons = ({pokemons}) => {
                         data={pokemon}/>
                 ))
             }
-        </ul>
+        </ListStyled>
     );
 };
 
