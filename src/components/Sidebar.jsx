@@ -1,21 +1,28 @@
+import PokeIcon from "../assets/img/pokeapi_logo.png";
+import PokeDefault from "../assets/img/default_pokemon.jpeg";
 
 import styled from "styled-components";
+import PokeImage from "./PokeImage";
 
 const SidebarWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
 `;
 
 const Sidebar = () => {
     return (
         <SidebarWrapper>
-            {/*TODO*/}
-            <h1>Sidebar</h1>
-            {/*- Add default image for item */}
-            {/*- Add default image for pokemon */}
-
-            {/*<PokeImage/>*/}
-            {/*<PokeImage/>*/}
+            <PokeImage
+                src={PokeIcon}
+                alt="icon pokemon"
+            />
+            <PokeImage
+                src={PokeDefault}
+                alt="pokemon"
+            />
         </SidebarWrapper>
     );
 };

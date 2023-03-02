@@ -1,4 +1,5 @@
 const routes = {
-    home: '/'
+    home: '/',
+    detail : '/:idPokemon'
 }
 export  default routes

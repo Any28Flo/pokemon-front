@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Outlet} from "react-router-dom";
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -7,7 +8,7 @@ const ContentWrapper = styled.div`
 const Content = () => {
     return (
         <ContentWrapper>
-            <h2>Content</h2>
+            <Outlet />
         </ContentWrapper>
     );
 };

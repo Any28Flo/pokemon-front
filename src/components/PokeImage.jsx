@@ -6,10 +6,10 @@ const ImageWrapper = styled.div`
 `;
 
 
-const PokeImage = ({url, alt}) => {
+const PokeImage = ({src, alt}) => {
     return (
         <ImageWrapper>
-            <img src={url} alt={alt}/>
+            <img src={src} alt={alt}/>
         </ImageWrapper>
     );
 };
