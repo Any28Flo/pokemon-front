@@ -1,13 +1,14 @@
 import {useState} from 'react';
 import styled from "styled-components";
 import Pokemons from "../components/Pokemons";
+import {useSelector} from "react-redux";
 
 const PokemonListWrapper = styled.div`
    
 `;
 const PokemonGeneral = () => {
 
-    const [pokemons, setPokemons] = useState([{id: 1}]);
+    const { loading, pokemons } = useSelector(state => state.main);
 
     return (
         <PokemonListWrapper>
