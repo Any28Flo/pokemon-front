@@ -6,9 +6,10 @@ const Pokemons = ({pokemons}) => {
         <ul>
             {
                 pokemons.map((pokemon,index) => (
+
                     <PokemonItem
                         key={`pokemon-${index}`}
-                        data={pokemon.data}/>
+                        data={pokemon}/>
                 ))
             }
         </ul>

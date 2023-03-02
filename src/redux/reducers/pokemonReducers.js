@@ -1,6 +1,6 @@
 const initState = {
     actualPokemon: {},
-    pokemons:[],
+    pokemons:[{name: "raichu", id: 1}, {name: "raichu", id: 2}],
     loading:false,
     error:false
 
