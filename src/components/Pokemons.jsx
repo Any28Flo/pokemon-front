@@ -19,7 +19,6 @@ const Pokemons = ({pokemons}) => {
     }
 
     const doubleClickHandler = (idPokemon) => {
-        console.log("double click");
         navigate(`/${idPokemon}`);
     }
 
