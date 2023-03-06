@@ -14,10 +14,10 @@ const ListItemStyled = styled.li`
 const ImgStyled = styled.img`
   width: 20px;
 `;
-const PokemonItem = ({data = {}}) => {
+const PokemonItem = ({data = {}, onClick, onDoubleClick}) => {
     const {name} = data;
     return (
-        <ListItemStyled>
+        <ListItemStyled onClick={onClick} onDoubleClick={onDoubleClick}>
             {name}
             <span>
                 <ImgStyled src={Pokeball} alt="" />

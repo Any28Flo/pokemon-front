@@ -13,6 +13,7 @@ const SidebarWrapper = styled.div`
 `;
 
 const Sidebar = () => {
+
     return (
         <SidebarWrapper>
             <PokeImage

@@ -17,7 +17,7 @@ const PokemonGeneral = () => {
 
             dispatch(pokemon.getPokemons(query))
 
-    }, [pokemons]);
+    }, []);
     return (
         <PokemonListWrapper>
             <Pokemons pokemons = {pokemons}/>
