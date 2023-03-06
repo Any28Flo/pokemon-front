@@ -3,6 +3,7 @@ import PokeDefault from "../assets/img/default_pokemon.jpeg";
 
 import styled from "styled-components";
 import PokeImage from "./PokeImage";
+import {useSelector} from "react-redux";
 
 const SidebarWrapper = styled.div`
   display: flex;
@@ -13,6 +14,7 @@ const SidebarWrapper = styled.div`
 `;
 
 const Sidebar = () => {
+    const { actualPokemon } = useSelector(state => state.main);
 
     return (
         <SidebarWrapper>
@@ -21,7 +23,7 @@ const Sidebar = () => {
                 alt="icon pokemon"
             />
             <PokeImage
-                src={PokeDefault}
+                src={actualPokemon?.sprites?.front_default ? actualPokemon.sprites.front_default  : PokeDefault }
                 alt="pokemon"
             />
         </SidebarWrapper>
