@@ -31,11 +31,17 @@ const PokemonGeneral = () => {
         dispatch(pokemon.getPokemons(query))
 
     }, []);
+    console.log(previous)
+    console.log(previous === '' ? true : false)
     return (
         <PokemonListWrapper>
             <Pokemons pokemons={pokemons}/>
             <ActionWrapper>
-                <Button text="prev" handleClick={handlePrev}/>
+                <Button
+                    text="prev"
+                    handleClick={handlePrev}
+                    disable = { previous === '' ? true : false}
+                />
                 <Button text="next" handleClick={handleNext}/>
             </ActionWrapper>
 

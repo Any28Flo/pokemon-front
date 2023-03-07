@@ -2,11 +2,15 @@ import React from 'react';
 import styled from "styled-components";
 
 const ButtonWrapper = styled.button`
+  
 
 `;
-const Button = ({text, handleClick}) => {
+const Button = ({text, handleClick, disable=false}) => {
+    console.log(disable)
     return (
-        <ButtonWrapper onClick={handleClick}>
+        <ButtonWrapper
+            disabled={disable}
+            onClick={handleClick}>
             {text}
         </ButtonWrapper>
     );
