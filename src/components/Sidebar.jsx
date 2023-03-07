@@ -6,6 +6,7 @@ import PokeImage from "./PokeImage";
 import {useSelector} from "react-redux";
 
 const SidebarWrapper = styled.div`
+  grid-area: sidebar;
   display: flex;
   justify-content: space-between;
   flex-direction: column;

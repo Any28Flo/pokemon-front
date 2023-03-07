@@ -6,6 +6,9 @@ const ListItemStyled = styled.li`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
   //TODO
   //- add property to align items
   // justify-content: space-between

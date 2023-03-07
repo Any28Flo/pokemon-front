@@ -5,7 +5,7 @@ import Tag from "../components/Tag";
 import List from "../components/List";
 
 const DetailWrapper = styled.div`
-  //width: 100vw;
+  grid-area: main;
 `;
 const Wrapper = styled.div`
   display: flex;

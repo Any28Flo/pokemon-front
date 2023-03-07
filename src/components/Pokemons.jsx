@@ -6,7 +6,7 @@ import {pokemon} from "../redux/actions";
 import {useNavigate} from "react-router-dom";
 
 const ListStyled = styled.ul`
-  width: 100%;
+ 
 `;
 
 const Pokemons = ({pokemons}) => {

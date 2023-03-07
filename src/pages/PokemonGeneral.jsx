@@ -5,7 +5,7 @@ import {useEffect} from "react";
 import {pokemon} from "../redux/actions";
 
 const PokemonListWrapper = styled.div`
-   
+   width: 100%;
 `;
 const PokemonGeneral = () => {
 
