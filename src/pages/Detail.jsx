@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {useSelector} from "react-redux";
 import Tag from "../components/Tag";
+import List from "../components/List";
 
 const DetailWrapper = styled.div`
   //width: 100vw;
@@ -14,10 +15,25 @@ const Wrapper = styled.div`
 `;
 
 const Detail = () => {
-    const {actualPokemon} = useSelector(state => state.main);
 
-    console.log(actualPokemon)
-    const {name, height, weight, abilities, stats, id} = actualPokemon
+    const {actualPokemon} = useSelector(state => state.main);
+    // TODO
+    // - Add a handle Loading state
+    //
+    const {name, height, weight, abilities, stats, id} = actualPokemon;
+    const handleAbilities = (value) => {
+        return value.ability.name
+    }
+    const handleValueAbilitie= () => {
+        return ''
+    }
+    const handleStat = (value) =>{
+        return value.stat.name
+    }
+    const handleValueStat = (value) =>{
+        return value.base_stat
+    }
+
     return (
         <DetailWrapper>
             <Wrapper textAlign="center">
@@ -37,22 +53,21 @@ const Detail = () => {
                 justifyContent="space-around"
             >
                 <div className="detail__info">
-                    <ul>
-                        {
-                            abilities.map(abilitie => (
-                                <li>{abilitie.ability.name}</li>
-                            ))
-                        }
-                    </ul>
+                    <h1>Stats</h1>
+                    <List
+                        values={stats}
+                        handleKeys={handleStat}
+                        separator =':'
+                        handleValue={handleValueStat} />
                 </div>
                 <div className="detail_abilities">
-                    <ul>
-                        {
-                            stats.map(stat => (
-                                <li>{stat.stat.name}</li>
-                            ))
-                        }
-                    </ul>
+                    <h1>Abilities</h1>
+                    <List
+                        values={abilities}
+                        handleKeys={handleAbilities}
+                        separator =''
+                        handleValue={handleValueAbilitie}/>
+
                 </div>
             </Wrapper>
         </DetailWrapper>

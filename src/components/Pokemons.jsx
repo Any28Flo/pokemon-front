@@ -25,6 +25,7 @@ const Pokemons = ({pokemons}) => {
     return (
         <ListStyled>
             {
+
                 pokemons.map((pokemon,index) => (
                     <PokemonItem
                         key={`pokemon-${index}`}
