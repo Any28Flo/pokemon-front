@@ -20,12 +20,13 @@ const pokemonReducer = (state = initState, action) => {
                 loading: true
             }
         case SUCCESS_GET_POKEMONS:
-            const {next, results}= action.payload;
+            const {next, results, previous}= action.payload;
             return {
                 ...state,
                 loading: false,
                 next: next,
-                pokemons: results
+                pokemons: results,
+                previous: previous
             }
         case SUCCESS_GET_POKEMON:
 

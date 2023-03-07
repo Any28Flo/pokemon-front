@@ -16,11 +16,11 @@ const actions = {
                 type: START_GET_POKEMONS
             })
             try {
-                const {next, results} = await PokeApi.getElement(query)
+                const {next, results,previous} = await PokeApi.getElement(query)
 
                 dispatch({
                     type: SUCCESS_GET_POKEMONS,
-                    payload: {next, results}
+                    payload: {next, results, previous}
                 })
 
             } catch (e) {
