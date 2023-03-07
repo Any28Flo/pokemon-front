@@ -27,17 +27,18 @@ const PokemonGeneral = () => {
     }
 
     useEffect(() => {
+        console.log(pokemons.length === 0)
+        if (pokemons.length === 0) {
+            dispatch(pokemon.getPokemons(query))
+        }
+        console.log(2);
 
-        dispatch(pokemon.getPokemons(query))
 
-    }, []);
-    console.log(loading);
-    if (loading) {
-        return <p>Cargando....</p>
+    }, [dispatch, pokemons]);
 
-    }
     return (
         <PokemonListWrapper>
+
             <Pokemons pokemons={pokemons} />
             <ActionWrapper>
                 <Button
