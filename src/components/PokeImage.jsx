@@ -4,8 +4,8 @@ const ImageWrapper = styled.div`
     display: flex;
     flex-direction: row;
     padding: ${props => props.padding || '3rem'};
-   
 `;
+
 const Image = styled.img`
   width: ${props => props.width || '20rem'};
 `
