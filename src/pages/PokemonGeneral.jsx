@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import Pokemons from "../components/Pokemons";
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {pokemon} from "../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { pokemon } from "../redux/actions";
 import Button from "../components/Button";
 
 const PokemonListWrapper = styled.div`
@@ -15,7 +15,7 @@ const ActionWrapper = styled.div`
 
 const PokemonGeneral = () => {
 
-    const {pokemons, query, next, previous} = useSelector(state => state.main);
+    const { pokemons, query, next, previous, loading } = useSelector(state => state.main);
 
     const dispatch = useDispatch();
 
@@ -31,17 +31,21 @@ const PokemonGeneral = () => {
         dispatch(pokemon.getPokemons(query))
 
     }, []);
+    console.log(loading);
+    if (loading) {
+        return <p>Cargando....</p>
 
+    }
     return (
         <PokemonListWrapper>
-            <Pokemons pokemons={pokemons}/>
+            <Pokemons pokemons={pokemons} />
             <ActionWrapper>
                 <Button
                     text="prev"
                     handleClick={handlePrev}
-                    disable = { previous === '' ? true : false}
+                    disable={previous === '' ? true : false}
                 />
-                <Button text="next" handleClick={handleNext}/>
+                <Button text="next" handleClick={handleNext} />
             </ActionWrapper>
 
 
