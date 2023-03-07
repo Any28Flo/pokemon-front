@@ -5,6 +5,7 @@ import Content from "../components/Content";
 
 const HomeWrapper = styled.div`
   display: grid;
+  width: 100%;
   grid-template-areas:
     'sidebar'
     'main';

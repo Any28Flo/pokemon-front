@@ -7,6 +7,8 @@ import store from "./redux/store";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
+  font: 700 1.4rem/3rem var(--font-Base);
+
 `;
 
 function App() {

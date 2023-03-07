@@ -6,6 +6,7 @@ import List from "../components/List";
 
 const DetailWrapper = styled.div`
   grid-area: main;
+  width: 100%;
 `;
 const Wrapper = styled.div`
   display: flex;
