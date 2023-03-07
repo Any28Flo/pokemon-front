@@ -6,7 +6,7 @@ const ButtonWrapper = styled.button`
 
 `;
 const Button = ({text, handleClick, disable=false}) => {
-    console.log(disable)
+
     return (
         <ButtonWrapper
             disabled={disable}

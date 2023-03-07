@@ -1,4 +1,10 @@
-import {START_GET_POKEMON, START_GET_POKEMONS, SUCCESS_GET_POKEMON, SUCCESS_GET_POKEMONS} from "../types/pokemonTypes";
+import {
+    HANDLE_RETURN,
+    START_GET_POKEMON,
+    START_GET_POKEMONS,
+    SUCCESS_GET_POKEMON,
+    SUCCESS_GET_POKEMONS
+} from "../types/pokemonTypes";
 
 const initState = {
     actualPokemon: {},
@@ -7,7 +13,7 @@ const initState = {
     loading:false,
     error:false,
     next:"",
-    prev:""
+    previous:""
 
 };
 const pokemonReducer = (state = initState, action) => {
@@ -26,7 +32,8 @@ const pokemonReducer = (state = initState, action) => {
                 loading: false,
                 next: next,
                 pokemons: results,
-                previous: previous ?? ''
+                previous: previous ?? '',
+                actualPokemon: {},
             }
         case SUCCESS_GET_POKEMON:
 
@@ -36,6 +43,12 @@ const pokemonReducer = (state = initState, action) => {
                 ...state,
                 loading: false,
                 actualPokemon: pokemonDetails
+            }
+        case HANDLE_RETURN:
+            console.log("Re")
+            return {
+                ...state,
+                actualPokemon: {},
             }
         default:
             return state;

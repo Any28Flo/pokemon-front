@@ -31,8 +31,7 @@ const PokemonGeneral = () => {
         dispatch(pokemon.getPokemons(query))
 
     }, []);
-    console.log(previous)
-    console.log(previous === '' ? true : false)
+
     return (
         <PokemonListWrapper>
             <Pokemons pokemons={pokemons}/>

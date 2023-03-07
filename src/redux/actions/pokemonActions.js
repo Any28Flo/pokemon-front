@@ -1,6 +1,7 @@
 import {
     FAIL_GET_POKEMON,
     FAIL_GET_POKEMONS,
+    HANDLE_RETURN,
     START_GET_POKEMON,
     START_GET_POKEMONS,
     SUCCESS_GET_POKEMON,
@@ -33,14 +34,13 @@ const actions = {
         }
     },
     getPokemon: (query) => {
-        console.log("2.get pokemon");
+
         return async dispatch => {
             dispatch({
                 type: START_GET_POKEMON
             })
             try {
                 const pokemonDetails = await PokeApi.getElement(query)
-                console.log("3.Details")
                 dispatch({
                     type: SUCCESS_GET_POKEMON,
                     payload : pokemonDetails
@@ -53,6 +53,13 @@ const actions = {
                 })
             }
 
+        }
+    },
+    handleReturn : () =>{
+        return  dispatch => {
+            dispatch({
+                type: HANDLE_RETURN
+            })
         }
     }
 

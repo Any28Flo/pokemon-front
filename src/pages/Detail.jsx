@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import Tag from "../components/Tag";
 import List from "../components/List";
+import Button from "../components/Button";
+import {useNavigate} from "react-router-dom";
+import {pokemon} from "../redux/actions";
 
 const DetailWrapper = styled.div`
   grid-area: main;
@@ -18,6 +21,9 @@ const Wrapper = styled.div`
 const Detail = () => {
 
     const {actualPokemon} = useSelector(state => state.main);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
     // TODO
     // - Add a handle Loading state
     //
@@ -34,9 +40,15 @@ const Detail = () => {
     const handleValueStat = (value) =>{
         return value.base_stat
     }
-
+    const handleBack = ()=>{
+        console.log("asd")
+        dispatch(pokemon.handleReturn);
+        navigate(`/`);
+    }
     return (
         <DetailWrapper>
+            <Button text="back" handleClick={handleBack}/>
+
             <Wrapper textAlign="center">
                 <p>Type</p>
                 <p>Poison</p>

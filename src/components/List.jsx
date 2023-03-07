@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {logDOM} from "@testing-library/react";
 
 const ListStyled = styled.ul`
   list-style: none;
