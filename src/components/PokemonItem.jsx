@@ -8,7 +8,14 @@ const ListItemStyled = styled.li`
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-
+  background: #FFFFFF;
+  box-shadow: 0px .4rem 6rem rgba(154, 188, 196, 0.27);
+  border-radius: .8rem;
+  margin: 1rem;
+  &:hover{
+    cursor: pointer;
+  }
+  
   //TODO
   //- add property to align items
   // justify-content: space-between

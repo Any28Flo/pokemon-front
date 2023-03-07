@@ -59,6 +59,7 @@ const Detail = () => {
                         values={stats}
                         handleKeys={handleStat}
                         separator =':'
+                        hasProgress={true}
                         handleValue={handleValueStat} />
                 </div>
                 <div className="detail_abilities">
@@ -68,7 +69,6 @@ const Detail = () => {
                         handleKeys={handleAbilities}
                         separator =''
                         handleValue={handleValueAbilitie}/>
-
                 </div>
             </Wrapper>
         </DetailWrapper>
